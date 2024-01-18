@@ -1,28 +1,18 @@
-"""
+def double_stuff(input_list):
+    for i, v in enumerate(input_list):
+        input_list[i] = v*2
+    return input_list
+list = [2.5,4.3,8.6,10,12,14,16]
+result_list = double_stuff(list)
 
-Create a Python file named lab_10-3.py
-*** You must write a comment for every chunk of code you write from now on along with your author tag***
+print(result_list)
 
-Write a program that contains a function called double_stuff. The function should take a list as its only parameter.
-When a list is passed as an argument to the function, the function should double each value in the list, regardless of its type
-Write test cases to confirm that your function works when passed a list that:
-Contains only integers
-Contains integer and float values
-Contains a combination of integer, string, and float values
+# Test Case 1: List with Integers
+int_list = [2, 4, 8, 10, 12, 14, 16]
+result_int_list = double_stuff(int_list)
+print(result_int_list)
 
-_____________________________________________________________________________________________________________
-
-Create a Python file named lab_10-4.py
-
-Write a program that contains a function called indexed_names. 
-The function should take a list of names as its only parameter.
-When a list is passed as an argument to the function,
-the function should return a new list where each value is replaced by the index, 
-followed by a color, space, and the original value
-i.e. passing through ["John", "Jane", "Bob"] 
-would return ["0: John", "1: Jane", "2: Bob"]
-Write 2 test cases to confirm that your function works when passed a list that:
-
-
-
-"""
+# Test Case 2: List with Float Values
+float_list = [2.5, 4.3, 8.6, 10.0, 12.8, 14.2, 16.1]
+result_float_list = double_stuff(float_list)
+print(result_float_list)
